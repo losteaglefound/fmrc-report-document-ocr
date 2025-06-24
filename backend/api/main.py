@@ -5,9 +5,9 @@ from fastapi import (
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from .api.routers import api_router
-from .common.config import setting
-from .common.schema import MessageSchema
+from .routers import api_router
+from ..common.config import setting
+from ..common.schema import MessageSchema
 
 
 app = FastAPI()
