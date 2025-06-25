@@ -1,0 +1,40 @@
+[project]
+name = "report_generation"
+version = "0.0.1"
+authors = [
+  { name="Example Author", email="author@example.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "fastapi[standard]==0.115.13",
+    "pdfplumber==0.11.7",
+    "aiofiles==24.1.0",
+    "pyjwt==2.10.1",
+    "passlib[bcrypt]==1.7.4",
+    "openai==1.91.0",
+    "google-api-python-client==2.173.0",
+    "google-auth==2.40.3",
+    "google-auth-oauthlib==1.2.2"
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["backend*"]
+
+[project.scripts]
+report-generation-server = "backend.api.main:main"
