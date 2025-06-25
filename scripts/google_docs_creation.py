@@ -1,19 +1,22 @@
+import asyncio
+import json
 import os
 
+import aiofiles
 from dotenv import load_dotenv
-
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
 
 from config import setting
+from llm_response_store import response
 
 
 # Scopes for Google Drive and Docs
 SCOPES = setting.GOOGLE_CLIENT_SCOPE
 
-def get_services():
+async def get_services():
     creds = None
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
@@ -28,13 +31,13 @@ def get_services():
     return drive_service, docs_service
 
 
-def copy_template(drive_service, template_id, new_title):
+async def copy_template(drive_service, template_id, new_title):
     body = {'name': new_title}
     new_doc = drive_service.files().copy(fileId=template_id, body=body).execute()
     return new_doc['id']
 
 
-def replace_placeholders(docs_service, document_id, replacements):
+async def replace_placeholders(docs_service, document_id, replacements):
     requests = []
     for placeholder, value in replacements.items():
         requests.append({
@@ -46,7 +49,7 @@ def replace_placeholders(docs_service, document_id, replacements):
     docs_service.documents().batchUpdate(documentId=document_id, body={'requests': requests}).execute()
 
 
-def insert_text(docs_service, document_id, text="Hello, this is an automated message!"):
+async def insert_text(docs_service, document_id, text="Hello, this is an automated message!"):
     requests = [
         {
             'insertText': {
@@ -61,7 +64,7 @@ def insert_text(docs_service, document_id, text="Hello, this is an automated mes
         documentId=document_id, body={'requests': requests}).execute()
     print("Text inserted successfully.")
 
-def create_new_document(docs_service):
+async def create_new_document(docs_service):
     """
     Create new document and get it's id
     Args:
@@ -77,8 +80,9 @@ def create_new_document(docs_service):
 
 
 
-def main():
-    drive_service, docs_service = get_services()
+async def main():
+    drive_service, docs_service = await get_services()
+    # print(dir(docs_service.documents()))
 
     # doc_id = create_new_document(docs_service)
     doc_id = "1iEg_wTbRorPXU6oJf7ATV6kv20yNFFI3wwrldf3C6fE"
@@ -96,9 +100,15 @@ def main():
     
     # Step 2: Replace placeholders
     # replace_placeholders(docs_service, new_doc_id, PLACEHOLDERS)
-    insert_text(docs_service, doc_id)
+    # insert_text(docs_service, doc_id, response)
+
+
+    # Get document content
+    doc_content = docs_service.documents().get(documentId=doc_id).execute()
+    async with aiofiles.open(f"doc_content_{doc_id}.json", 'w') as f:
+        await f.write(json.dumps(doc_content, indent=4))
     
     print(f'Document created: https://docs.google.com/document/d/{doc_id}/edit')
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

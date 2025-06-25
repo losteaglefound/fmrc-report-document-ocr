@@ -9,12 +9,14 @@ from fastapi import (
 from fastapi.exceptions import HTTPException
 from fastapi.responses import JSONResponse
 
-from ...common.logging import logging
 from ...common.config import setting
+from ...common.logging import logging
 from ...common.utils import (
     pdf_is_native,
     UniqueID
 )
+from ...utils.v1 import build_report
+
 
 logger = logging.getLogger()
 
@@ -57,7 +59,10 @@ async def upload_file(files: list[UploadFile]):
             
             native_pdf = await pdf_is_native(file.file)
             logger.info("Native pdf: {}".format(native_pdf))
-            
+
+            report = await build_report(file_path)
+            logger.info(f"Report: {report}")
+
         return JSONResponse(
             {
                 "message": "File uploaded successfully"
@@ -66,7 +71,10 @@ async def upload_file(files: list[UploadFile]):
         )
 
     except Exception as e:
-        return HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail={"error": f"Error: {str(e)}"}
+        logger.error(f"Error: {str(e)}")
+        return JSONResponse(
+            content={
+                "error": f"{str(e)}",
+            },
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
         )

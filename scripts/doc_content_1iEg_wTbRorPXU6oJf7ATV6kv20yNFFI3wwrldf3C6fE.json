@@ -1,0 +1,1692 @@
+{
+    "title": "Generated Document from Template",
+    "body": {
+        "content": [
+            {
+                "endIndex": 1,
+                "sectionBreak": {
+                    "sectionStyle": {
+                        "columnSeparatorStyle": "NONE",
+                        "contentDirection": "LEFT_TO_RIGHT",
+                        "sectionType": "CONTINUOUS"
+                    }
+                }
+            },
+            {
+                "startIndex": 1,
+                "endIndex": 2,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 1,
+                            "endIndex": 2,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2,
+                "endIndex": 53,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2,
+                            "endIndex": 53,
+                            "textRun": {
+                                "content": "### Pediatric Occupational Therapy Clinical Report\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 53,
+                "endIndex": 54,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 53,
+                            "endIndex": 54,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 54,
+                "endIndex": 72,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 54,
+                            "endIndex": 72,
+                            "textRun": {
+                                "content": "**Demographics:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 72,
+                "endIndex": 73,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 72,
+                            "endIndex": 73,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 73,
+                "endIndex": 114,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 73,
+                            "endIndex": 114,
+                            "textRun": {
+                                "content": "- **Child\u2019s Full Name:** Child Baby Love\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 114,
+                "endIndex": 145,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 114,
+                            "endIndex": 145,
+                            "textRun": {
+                                "content": "- **Date of Birth:** 5/11/2023\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 145,
+                "endIndex": 188,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 145,
+                            "endIndex": 188,
+                            "textRun": {
+                                "content": "- **Chronological Age:** 2 years, 0 months\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 188,
+                "endIndex": 208,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 188,
+                            "endIndex": 208,
+                            "textRun": {
+                                "content": "- **UCI#:** 1234566\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 208,
+                "endIndex": 224,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 208,
+                            "endIndex": 224,
+                            "textRun": {
+                                "content": "- **Sex:** Male\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 224,
+                "endIndex": 258,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 224,
+                            "endIndex": 258,
+                            "textRun": {
+                                "content": "- **Preferred Language:** Spanish\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 258,
+                "endIndex": 293,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 258,
+                            "endIndex": 293,
+                            "textRun": {
+                                "content": "- **Parent/Guardian Name:** Childs\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 293,
+                "endIndex": 328,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 293,
+                            "endIndex": 328,
+                            "textRun": {
+                                "content": "- **Date of Encounter:** 5/28/2025\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 328,
+                "endIndex": 329,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 328,
+                            "endIndex": 329,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 329,
+                "endIndex": 333,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 329,
+                            "endIndex": 333,
+                            "textRun": {
+                                "content": "---\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 333,
+                "endIndex": 334,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 333,
+                            "endIndex": 334,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 334,
+                "endIndex": 361,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 334,
+                            "endIndex": 361,
+                            "textRun": {
+                                "content": "**Clinical Observations:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 361,
+                "endIndex": 362,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 361,
+                            "endIndex": 362,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 362,
+                "endIndex": 879,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 362,
+                            "endIndex": 879,
+                            "textRun": {
+                                "content": "During the session, Child Baby Love frequently placed his fingers in his mouth, which may indicate a sensory-seeking behavior or a self-soothing mechanism. He demonstrated a tendency to overstuff his mouth multiple times, leading to instances of gagging. This behavior suggests challenges with oral-motor control and awareness. Child Baby Love utilized both hands to self-feed, which indicates a level of independence; however, he also accepted assistance, suggesting a need for support in managing food effectively.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 879,
+                "endIndex": 880,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 879,
+                            "endIndex": 880,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 880,
+                "endIndex": 884,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 880,
+                            "endIndex": 884,
+                            "textRun": {
+                                "content": "---\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 884,
+                "endIndex": 885,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 884,
+                            "endIndex": 885,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 885,
+                "endIndex": 923,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 885,
+                            "endIndex": 923,
+                            "textRun": {
+                                "content": "**Assessment Score Interpretations:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 923,
+                "endIndex": 924,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 923,
+                            "endIndex": 924,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 924,
+                "endIndex": 938,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 924,
+                            "endIndex": 938,
+                            "textRun": {
+                                "content": "**Bayley-4:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 938,
+                "endIndex": 939,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 938,
+                            "endIndex": 939,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 939,
+                "endIndex": 1544,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 939,
+                            "endIndex": 1544,
+                            "textRun": {
+                                "content": "Child Baby Love's cognitive scaled score of 2, corresponding to an age equivalent of 18 months, falls within the \"Extremely Low\" range, indicating significant developmental delays in cognitive processing compared to peers. His language score of 1, with an age equivalent of 10 months, also reflects an \"Extremely Low\" classification, suggesting substantial delays in expressive and receptive language skills. The motor score of 4, equating to an age equivalent of 17 months and a percentile rank of 41%, indicates below-average motor skills, impacting his ability to navigate his environment effectively.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 1544,
+                "endIndex": 1545,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 1544,
+                            "endIndex": 1545,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 1545,
+                "endIndex": 1574,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 1545,
+                            "endIndex": 1574,
+                            "textRun": {
+                                "content": "**SP2 (Sensory Profile 2):**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 1574,
+                "endIndex": 1575,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 1574,
+                            "endIndex": 1575,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 1575,
+                "endIndex": 2138,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 1575,
+                            "endIndex": 2138,
+                            "textRun": {
+                                "content": "Child Baby Love exhibits sensory-seeking behaviors less frequently than peers, while his avoiding and sensitivity scores are much higher than typical. These tendencies may manifest as withdrawal from overstimulating environments or discomfort with certain textures during play and feeding. His typical registration score suggests that he can process sensory information at an average level when stimuli are not overwhelming. These patterns can affect his participation in daily activities, such as play and grooming, potentially leading to avoidance or distress.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2138,
+                "endIndex": 2139,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2138,
+                            "endIndex": 2139,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2139,
+                "endIndex": 2151,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2139,
+                            "endIndex": 2151,
+                            "textRun": {
+                                "content": "**CHOMPS:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2151,
+                "endIndex": 2152,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2151,
+                            "endIndex": 2152,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2152,
+                "endIndex": 2523,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2152,
+                            "endIndex": 2523,
+                            "textRun": {
+                                "content": "The high concern in all oral-motor domains indicates significant challenges with feeding safety and efficiency. Child Baby Love demonstrates poor bolus control, which can lead to food hoarding and an increased gag reflex, posing risks during meals. These concerns necessitate close monitoring and intervention to ensure safe swallowing and improve his oral-motor skills.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2523,
+                "endIndex": 2524,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2523,
+                            "endIndex": 2524,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2524,
+                "endIndex": 2538,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2524,
+                            "endIndex": 2538,
+                            "textRun": {
+                                "content": "**PEDI-EAT:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2538,
+                "endIndex": 2539,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2538,
+                            "endIndex": 2539,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2539,
+                "endIndex": 2950,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2539,
+                            "endIndex": 2950,
+                            "textRun": {
+                                "content": "Concerns in physiologic symptoms, oral processing, and selective eating suggest difficulties with feeding safety and endurance. Child Baby Love may exhibit fatigue during meals and a limited diet due to selectivity, requiring caregiver support to encourage a balanced intake. Although no concerns were noted in mealtime behaviors, the existing issues may still impact his overall nutritional status and growth.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2950,
+                "endIndex": 2951,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2950,
+                            "endIndex": 2951,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2951,
+                "endIndex": 2955,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2951,
+                            "endIndex": 2955,
+                            "textRun": {
+                                "content": "---\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2955,
+                "endIndex": 2956,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2955,
+                            "endIndex": 2956,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2956,
+                "endIndex": 2987,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2956,
+                            "endIndex": 2987,
+                            "textRun": {
+                                "content": "**Summary & Recommendations:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2987,
+                "endIndex": 2988,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2987,
+                            "endIndex": 2988,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 2988,
+                "endIndex": 3244,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 2988,
+                            "endIndex": 3244,
+                            "textRun": {
+                                "content": "Child Baby Love presents with significant developmental delays across cognitive, language, and motor domains, compounded by sensory processing challenges and oral-motor concerns. These issues impact his daily functioning and require targeted intervention.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3244,
+                "endIndex": 3245,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3244,
+                            "endIndex": 3245,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3245,
+                "endIndex": 3267,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3245,
+                            "endIndex": 3267,
+                            "textRun": {
+                                "content": "**Measurable Goals:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3267,
+                "endIndex": 3268,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3267,
+                            "endIndex": 3268,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3268,
+                "endIndex": 3370,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3268,
+                            "endIndex": 3370,
+                            "textRun": {
+                                "content": "1. Improve oral-motor control to reduce instances of gagging and overstuffing by 50% within 6 months.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3370,
+                "endIndex": 3505,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3370,
+                            "endIndex": 3505,
+                            "textRun": {
+                                "content": "2. Enhance cognitive engagement during structured play activities to achieve a cognitive age equivalent of 24 months within 12 months.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3505,
+                "endIndex": 3606,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3505,
+                            "endIndex": 3606,
+                            "textRun": {
+                                "content": "3. Increase tolerance to a variety of food textures to expand dietary intake by 25% within 6 months.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3606,
+                "endIndex": 3607,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3606,
+                            "endIndex": 3607,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3607,
+                "endIndex": 3628,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3607,
+                            "endIndex": 3628,
+                            "textRun": {
+                                "content": "**Recommendations:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3628,
+                "endIndex": 3629,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3628,
+                            "endIndex": 3629,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3629,
+                "endIndex": 3739,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3629,
+                            "endIndex": 3739,
+                            "textRun": {
+                                "content": "1. Initiate a structured oral-motor therapy program focusing on safe swallowing techniques and bolus control.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3739,
+                "endIndex": 3873,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3739,
+                            "endIndex": 3873,
+                            "textRun": {
+                                "content": "2. Implement a sensory diet to address sensory processing needs, incorporating calming and organizing activities into daily routines.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 3873,
+                "endIndex": 4032,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 3873,
+                            "endIndex": 4032,
+                            "textRun": {
+                                "content": "3. Encourage caregiver participation in feeding therapy sessions to support skill generalization and provide strategies for managing selective eating at home.\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4032,
+                "endIndex": 4033,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4032,
+                            "endIndex": 4033,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4033,
+                "endIndex": 4037,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4033,
+                            "endIndex": 4037,
+                            "textRun": {
+                                "content": "---\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4037,
+                "endIndex": 4038,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4037,
+                            "endIndex": 4038,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4038,
+                "endIndex": 4066,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4038,
+                            "endIndex": 4066,
+                            "textRun": {
+                                "content": "**Additional Information:**\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4066,
+                "endIndex": 4067,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4066,
+                            "endIndex": 4067,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4067,
+                "endIndex": 4171,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4067,
+                            "endIndex": 4171,
+                            "textRun": {
+                                "content": "All sections have been completed as per the available data. Any missing information is marked as \"TBD.\"\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            },
+            {
+                "startIndex": 4171,
+                "endIndex": 4172,
+                "paragraph": {
+                    "elements": [
+                        {
+                            "startIndex": 4171,
+                            "endIndex": 4172,
+                            "textRun": {
+                                "content": "\n",
+                                "textStyle": {}
+                            }
+                        }
+                    ],
+                    "paragraphStyle": {
+                        "namedStyleType": "NORMAL_TEXT",
+                        "direction": "LEFT_TO_RIGHT"
+                    }
+                }
+            }
+        ]
+    },
+    "documentStyle": {
+        "background": {
+            "color": {}
+        },
+        "pageNumberStart": 1,
+        "marginTop": {
+            "magnitude": 72,
+            "unit": "PT"
+        },
+        "marginBottom": {
+            "magnitude": 72,
+            "unit": "PT"
+        },
+        "marginRight": {
+            "magnitude": 72,
+            "unit": "PT"
+        },
+        "marginLeft": {
+            "magnitude": 72,
+            "unit": "PT"
+        },
+        "pageSize": {
+            "height": {
+                "magnitude": 792,
+                "unit": "PT"
+            },
+            "width": {
+                "magnitude": 612,
+                "unit": "PT"
+            }
+        },
+        "marginHeader": {
+            "magnitude": 36,
+            "unit": "PT"
+        },
+        "marginFooter": {
+            "magnitude": 36,
+            "unit": "PT"
+        },
+        "useCustomHeaderFooterMargins": true
+    },
+    "namedStyles": {
+        "styles": [
+            {
+                "namedStyleType": "NORMAL_TEXT",
+                "textStyle": {
+                    "bold": false,
+                    "italic": false,
+                    "underline": false,
+                    "strikethrough": false,
+                    "smallCaps": false,
+                    "backgroundColor": {},
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {}
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 11,
+                        "unit": "PT"
+                    },
+                    "weightedFontFamily": {
+                        "fontFamily": "Arial",
+                        "weight": 400
+                    },
+                    "baselineOffset": "NONE"
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "alignment": "START",
+                    "lineSpacing": 115,
+                    "direction": "LEFT_TO_RIGHT",
+                    "spacingMode": "COLLAPSE_LISTS",
+                    "spaceAbove": {
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "unit": "PT"
+                    },
+                    "borderBetween": {
+                        "color": {},
+                        "width": {
+                            "unit": "PT"
+                        },
+                        "padding": {
+                            "unit": "PT"
+                        },
+                        "dashStyle": "SOLID"
+                    },
+                    "borderTop": {
+                        "color": {},
+                        "width": {
+                            "unit": "PT"
+                        },
+                        "padding": {
+                            "unit": "PT"
+                        },
+                        "dashStyle": "SOLID"
+                    },
+                    "borderBottom": {
+                        "color": {},
+                        "width": {
+                            "unit": "PT"
+                        },
+                        "padding": {
+                            "unit": "PT"
+                        },
+                        "dashStyle": "SOLID"
+                    },
+                    "borderLeft": {
+                        "color": {},
+                        "width": {
+                            "unit": "PT"
+                        },
+                        "padding": {
+                            "unit": "PT"
+                        },
+                        "dashStyle": "SOLID"
+                    },
+                    "borderRight": {
+                        "color": {},
+                        "width": {
+                            "unit": "PT"
+                        },
+                        "padding": {
+                            "unit": "PT"
+                        },
+                        "dashStyle": "SOLID"
+                    },
+                    "indentFirstLine": {
+                        "unit": "PT"
+                    },
+                    "indentStart": {
+                        "unit": "PT"
+                    },
+                    "indentEnd": {
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": false,
+                    "keepWithNext": false,
+                    "avoidWidowAndOrphan": true,
+                    "shading": {
+                        "backgroundColor": {}
+                    },
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_1",
+                "textStyle": {
+                    "fontSize": {
+                        "magnitude": 20,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 20,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 6,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_2",
+                "textStyle": {
+                    "bold": false,
+                    "fontSize": {
+                        "magnitude": 16,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 18,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 6,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_3",
+                "textStyle": {
+                    "bold": false,
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {
+                                "red": 0.2627451,
+                                "green": 0.2627451,
+                                "blue": 0.2627451
+                            }
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 14,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 16,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_4",
+                "textStyle": {
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {
+                                "red": 0.4,
+                                "green": 0.4,
+                                "blue": 0.4
+                            }
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 12,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 14,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_5",
+                "textStyle": {
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {
+                                "red": 0.4,
+                                "green": 0.4,
+                                "blue": 0.4
+                            }
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 11,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 12,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "HEADING_6",
+                "textStyle": {
+                    "italic": true,
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {
+                                "red": 0.4,
+                                "green": 0.4,
+                                "blue": 0.4
+                            }
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 11,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "magnitude": 12,
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 4,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "TITLE",
+                "textStyle": {
+                    "fontSize": {
+                        "magnitude": 26,
+                        "unit": "PT"
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 3,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            },
+            {
+                "namedStyleType": "SUBTITLE",
+                "textStyle": {
+                    "italic": false,
+                    "foregroundColor": {
+                        "color": {
+                            "rgbColor": {
+                                "red": 0.4,
+                                "green": 0.4,
+                                "blue": 0.4
+                            }
+                        }
+                    },
+                    "fontSize": {
+                        "magnitude": 15,
+                        "unit": "PT"
+                    },
+                    "weightedFontFamily": {
+                        "fontFamily": "Arial",
+                        "weight": 400
+                    }
+                },
+                "paragraphStyle": {
+                    "namedStyleType": "NORMAL_TEXT",
+                    "direction": "LEFT_TO_RIGHT",
+                    "spaceAbove": {
+                        "unit": "PT"
+                    },
+                    "spaceBelow": {
+                        "magnitude": 16,
+                        "unit": "PT"
+                    },
+                    "keepLinesTogether": true,
+                    "keepWithNext": true,
+                    "pageBreakBefore": false
+                }
+            }
+        ]
+    },
+    "revisionId": "ALBJ4Ltz86-xTDcocJ8vcyrUnPqybekeQjj36zwv_St9dI1Y2QnRF3M-iCxOj9u12LL2nnCcLPUFbSdHrkujDA",
+    "suggestionsViewMode": "SUGGESTIONS_INLINE",
+    "documentId": "1iEg_wTbRorPXU6oJf7ATV6kv20yNFFI3wwrldf3C6fE"
+}

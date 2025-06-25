@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 
-assert load_dotenv()
+assert load_dotenv(override=True)
 
 
 class Setting:
