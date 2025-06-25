@@ -208,6 +208,7 @@ __marimo__/
 
 
 
+scripts/doc_content_*.json
 /backend/static
 token.json
 credential*.json
