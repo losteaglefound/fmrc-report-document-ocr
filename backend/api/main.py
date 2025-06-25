@@ -1,9 +1,11 @@
 from fastapi import (
     FastAPI,
+    Request,
     status
 )
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 import uvicorn
 
 from .routers import api_router
@@ -17,14 +19,15 @@ app.include_router(api_router)
 # mount the status directory
 app.mount("/static", StaticFiles(directory=setting.STATIC_DIR), name="static")
 
+# mounting the templates directory
+templates = Jinja2Templates(directory=setting.TEMPLATES_DIR)
 
-@app.get("/", response_model=MessageSchema)
-async def read_root():
-    return JSONResponse(
-        {
-            "message": "Hello World",
-        },
-        status_code=status.HTTP_200_OK
+
+@app.get("/")
+async def read_root(request: Request):
+    return templates.TemplateResponse(
+        request=request,
+        name='upload.html'
     )
 
 

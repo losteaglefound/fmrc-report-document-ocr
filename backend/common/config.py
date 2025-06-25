@@ -26,5 +26,6 @@ class Setting:
     OPENAI_MODEL: open_ai_models = os.getenv("OPENAI_MODEL")
     GOOGLE_CLIENT_SCOPE: list[str] = os.getenv("GOOGLE_CLIENT_SCOPE").split(",")
     GOOGLE_CLIENT_ID: str = os.getenv("GOOGLE_CLIENT_ID")
+    TEMPLATES_DIR: str = os.path.join(BASE_DIR, "templates")
 
 setting = Setting()
