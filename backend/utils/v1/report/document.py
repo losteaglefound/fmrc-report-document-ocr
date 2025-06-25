@@ -7,9 +7,10 @@ import openai
 
 from ....common import (
     logging,
+    open_ai_models,
     setting
 )
-from ...v1 import get_pediatric_prompt
+from ..prompt.pediatric_prompt import get_pediatric_prompt
 
 
 logger = logging.getLogger(__name__)
@@ -71,10 +72,7 @@ async def extract_structured_data(text) -> dict:
     }
 
 
-# ----------------------------
-# GPT Execution
-# ----------------------------
-async def call_openai_gpt(prompt, model="gpt-4o", temperature=0.4):
+async def call_openai_gpt(prompt, /, model: open_ai_models, temperature=0.4):
     openai.api_key = setting.OPENAI_API_KEY
     response = openai.chat.completions.create(
         model=model,
@@ -95,6 +93,6 @@ async def build_report(file: str):
     logger.info(f"Extracted structured data: {structured_data}")
     prompt = await get_pediatric_prompt(structured_data)
     logger.info(f"Prompt: {prompt}")
-    report = await call_openai_gpt(prompt)
+    report = await call_openai_gpt(prompt, model="gpt-4o")
     logger.info(f"Report: {report}")
     return report

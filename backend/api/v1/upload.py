@@ -15,7 +15,10 @@ from ...common.utils import (
     pdf_is_native,
     UniqueID
 )
-from ...utils.v1 import build_report
+from ...utils.v1 import (
+    create_google_docs,
+    build_report
+)
 
 
 logger = logging.getLogger()
@@ -60,12 +63,16 @@ async def upload_file(files: list[UploadFile]):
             native_pdf = await pdf_is_native(file.file)
             logger.info("Native pdf: {}".format(native_pdf))
 
-            report = await build_report(file_path)
-            logger.info(f"Report: {report}")
+            # report = await build_report(file_path)
+            # logger.info(f"Report: {report}")
+            report = "Hello, this is a test report."
+
+            google_docs_url = await create_google_docs(report)
+            logger.info(f"Google docs url: {google_docs_url}")
 
         return JSONResponse(
             {
-                "message": "File uploaded successfully"
+                "message": f"File uploaded successfully, report has beend generated and uploaded to google docs {google_docs_url}."
             },
             status_code=status.HTTP_200_OK
         )
