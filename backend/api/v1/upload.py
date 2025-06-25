@@ -55,7 +55,7 @@ async def upload_file(files: list[UploadFile]):
                 while content := await file.read(1024 * 1024):
                     await f.write(content)
             
-            native_pdf = await pdf_is_native(file_path)
+            native_pdf = await pdf_is_native(file.file)
             logger.info("Native pdf: {}".format(native_pdf))
             
         return JSONResponse(

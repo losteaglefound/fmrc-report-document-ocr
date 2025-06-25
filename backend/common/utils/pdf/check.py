@@ -1,7 +1,7 @@
 import pdfplumber
 
 
-async def pdf_is_native(file: str) -> bool:
+async def pdf_is_native(file: str | bytes) -> bool:
     """
     The function check is the pdf is native or scanned.
     Args:
