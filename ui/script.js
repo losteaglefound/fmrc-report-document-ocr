@@ -1,7 +1,7 @@
 class FileUploadSystem {
     constructor() {
         this.files = [];
-        this.uploadEndpoint = '/api/upload'; // Update this to your actual endpoint
+        this.uploadEndpoint = 'http://localhost:8000/api/v1/upload'; // Update this to your actual endpoint
         this.initializeElements();
         this.bindEvents();
     }
@@ -23,7 +23,12 @@ class FileUploadSystem {
 
     bindEvents() {
         // File input change
-        this.uploadBtn.addEventListener('click', () => this.fileInput.click());
+        this.uploadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            this.fileInput.click();
+        });
         this.fileInput.addEventListener('change', (e) => this.handleFileSelect(e));
 
         // Drag and drop events
@@ -32,8 +37,18 @@ class FileUploadSystem {
         this.uploadArea.addEventListener('drop', (e) => this.handleDrop(e));
 
         // Modal events
-        this.closeModal.addEventListener('click', () => this.closeResultModal());
-        this.overlay.addEventListener('click', () => this.closeResultModal());
+        this.closeModal.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            this.closeResultModal();
+        });
+        this.overlay.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            this.closeResultModal();
+        });
 
         // Keyboard events
         document.addEventListener('keydown', (e) => {
@@ -59,11 +74,16 @@ class FileUploadSystem {
     }
 
     handleFileSelect(e) {
+        console.log('File select event triggered'); // Debug log
+        e.preventDefault();
+        e.stopPropagation();
         const files = Array.from(e.target.files);
+        console.log('Selected files:', files.length); // Debug log
         this.addFiles(files);
     }
 
     addFiles(newFiles) {
+        console.log('Adding files:', newFiles.length); // Debug log
         newFiles.forEach(file => {
             if (!this.files.find(f => f.name === file.name && f.size === file.size)) {
                 this.files.push({
@@ -158,6 +178,8 @@ class FileUploadSystem {
     }
 
     async uploadFiles() {
+        console.log('Upload files called'); // Debug log
+        
         if (this.files.length === 0) {
             this.showNotification('Please select files to upload', 'error');
             return;
@@ -172,7 +194,9 @@ class FileUploadSystem {
                 this.updateFileStatus(index, 'uploading');
             });
 
+            console.log('Sending upload request...'); // Debug log
             const response = await this.sendUploadRequest(formData);
+            console.log('Upload response received:', response); // Debug log
             this.handleUploadResponse(response);
         } catch (error) {
             console.error('Upload error:', error);
@@ -257,10 +281,10 @@ class FileUploadSystem {
                     <p><strong>Extracted URL:</strong></p>
                     <div class="url-text">${extractedUrl}</div>
                     <div class="url-actions">
-                        <button class="url-btn copy-btn" onclick="fileUploadSystem.copyToClipboard('${extractedUrl}')">
+                        <button type="button" class="url-btn copy-btn" onclick="fileUploadSystem.copyToClipboard('${extractedUrl}')">
                             <i class="fas fa-copy"></i> Copy URL
                         </button>
-                        <button class="url-btn open-btn" onclick="fileUploadSystem.openUrl('${extractedUrl}')">
+                        <button type="button" class="url-btn open-btn" onclick="fileUploadSystem.openUrl('${extractedUrl}')">
                             <i class="fas fa-external-link-alt"></i> Open in New Tab
                         </button>
                     </div>
@@ -346,12 +370,29 @@ class FileUploadSystem {
 // Initialize the file upload system
 const fileUploadSystem = new FileUploadSystem();
 
-// Add upload button functionality
+// Global event listeners to prevent page reloads
 document.addEventListener('DOMContentLoaded', () => {
+    // Prevent any form submissions
+    document.addEventListener('submit', (e) => {
+        console.log('Form submission prevented'); // Debug log
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        return false;
+    });
+
+    // Prevent any button clicks that might cause form submission
+    document.addEventListener('click', (e) => {
+        if (e.target.tagName === 'BUTTON' && !e.target.type) {
+            e.target.type = 'button'; // Ensure button doesn't submit forms
+        }
+    });
+
     // Add an upload button to the UI
     const uploadContainer = document.querySelector('.upload-container');
     const uploadButton = document.createElement('button');
     uploadButton.className = 'upload-btn';
+    uploadButton.type = 'button'; // Prevent form submission
     uploadButton.style.cssText = `
         margin-top: 20px;
         background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
@@ -365,13 +406,21 @@ document.addEventListener('DOMContentLoaded', () => {
         box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
     `;
     uploadButton.innerHTML = '<i class="fas fa-upload"></i> Upload Files';
-    uploadButton.addEventListener('click', () => fileUploadSystem.uploadFiles());
+    uploadButton.addEventListener('click', (e) => {
+        console.log('Upload button clicked'); // Debug log
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        fileUploadSystem.uploadFiles();
+        return false; // Additional safeguard
+    });
     
     uploadContainer.appendChild(uploadButton);
 
     // Add clear button
     const clearButton = document.createElement('button');
     clearButton.className = 'upload-btn';
+    clearButton.type = 'button'; // Prevent form submission
     clearButton.style.cssText = `
         margin-top: 10px;
         margin-left: 10px;
@@ -386,7 +435,14 @@ document.addEventListener('DOMContentLoaded', () => {
         box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
     `;
     clearButton.innerHTML = '<i class="fas fa-trash"></i> Clear Files';
-    clearButton.addEventListener('click', () => fileUploadSystem.clearFiles());
+    clearButton.addEventListener('click', (e) => {
+        console.log('Clear button clicked'); // Debug log
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        fileUploadSystem.clearFiles();
+        return false; // Additional safeguard
+    });
     
     uploadContainer.appendChild(clearButton);
 });

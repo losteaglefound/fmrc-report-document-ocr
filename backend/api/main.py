@@ -6,15 +6,23 @@ from fastapi import (
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from .routers import api_router
+from .routers import api_router_v1
 from ..common.config import setting
 from ..common.schema import MessageSchema
 
 
 app = FastAPI()
-app.include_router(api_router)
+app.include_router(api_router_v1, prefix="/api/v1")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+)
 
 # mount the status directory
 app.mount("/static", StaticFiles(directory=setting.STATIC_DIR), name="static")
