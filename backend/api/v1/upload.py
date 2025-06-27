@@ -110,7 +110,7 @@ async def upload_file(files: list[UploadFile]):
             logger.info(f"Uploading file: {file.filename}")
             # storing path
             filename = "_".join([await UniqueID.get_uuid4(), file.filename])
-            file_path = os.path.join(setting.STATIC_DIR, filename)
+            file_path = os.path.join(setting.UPLOAD_DIR, filename)
             
             async with aiofiles.open(file_path, 'wb') as f:
                 while content := await file.read(1024 * 1024):

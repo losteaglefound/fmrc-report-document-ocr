@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from fastapi import (
     FastAPI,
     Request,
@@ -14,7 +16,15 @@ from ..common.config import setting
 from ..common.schema import MessageSchema
 
 
-app = FastAPI()
+@asynccontextmanager
+async  def lifespan(app: FastAPI):
+    setting.UPLOAD_DIR
+    yield
+
+
+app = FastAPI(
+    lifespan=lifespan
+)
 app.include_router(api_router_v1, prefix="/api/v1")
 app.add_middleware(
     CORSMiddleware,
@@ -23,6 +33,8 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
+
 
 # mount the status directory
 app.mount("/static", StaticFiles(directory=setting.STATIC_DIR), name="static")
