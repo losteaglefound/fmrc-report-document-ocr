@@ -11,6 +11,8 @@ from ....common import (
     setting
 )
 from ..prompt.pediatric_prompt import get_pediatric_prompt
+from ..text import extract_field
+from .sample import REPORT
 
 
 logger = logging.getLogger(__name__)
@@ -38,6 +40,7 @@ async def calculate_chronological_age(dob_str, encounter_str):
         return f"{years} years, {months} months"
     except:
         return "TBD"
+
 
 async def extract_structured_data(text) -> dict:
     dob = await extract_field(r"Date of Birth:\s*(\d{1,2}/\d{1,2}/\d{4})", text)
@@ -87,12 +90,30 @@ async def call_openai_gpt(prompt, /, model: open_ai_models, temperature=0.4):
 
 async def build_report(file: str):
     logger.info(f"Building report for file: {file}")
+
     text = await extract_text_from_pdf(file)
-    logger.info(f"Extracted text: {text}")
-    structured_data = await extract_structured_data(text)
-    logger.info(f"Extracted structured data: {structured_data}")
-    prompt = await get_pediatric_prompt(structured_data)
-    logger.info(f"Prompt: {prompt}")
-    report = await call_openai_gpt(prompt, model="gpt-4o")
-    logger.info(f"Report: {report}")
-    return report
+    # logger.info(f"Extracted text: {text}")
+    
+    
+    # structured_data = await extract_structured_data(text)
+    # logger.info(f"Extracted structured data: {structured_data}")
+    
+    prompt = await get_pediatric_prompt(text)
+    # logger.info(f"Prompt: {prompt}")
+
+    # TODO: remove the sample removed in production
+    response = await call_openai_gpt(prompt, model="gpt-4o")
+    # response = REPORT
+    logger.info(f"Report: {response}")
+
+    response_splited = response.split("\n")
+    response_removed_md = response_splited[1:len(response_splited)-2]
+    response = "\n".join(response_removed_md)
+
+    return response
+
+
+
+async def get_child_name(content: str) -> str:
+    child_name = await extract_field(r'\*\*Name:\*\*\s*(.+)', content)
+    return child_name

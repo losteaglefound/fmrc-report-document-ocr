@@ -15,6 +15,7 @@ from config import (
     logging,
     setting
 )
+from prompts import get_prompt_markdown_with_structure
 from report import REPORT
 from convert_markdown import (
     extract_plain_text,
@@ -90,139 +91,8 @@ key_heading_mapping = {
 
 
 
-async def get_prompt(context: str):
-    # PROMPT = f"""
-    # You are a highly skilled pediatric occupational therapist and medical report writer. Based on the provided evaluation text extracted from a PDF, your task is to extract structured data and rewrite observations and test results into detailed, clinically accurate narratives.
-
-    # The text will contain demographic details, clinical observations, and standardized test results (Bayley-4, SP2, ChOMPS, PediEAT). Do not guess. If a section is missing, write `"Not available"`.
-
-    # This is the file context: {context}
-
-    # Use the tone and level of detail in the FMRC Health Group Master Report as your standard. Your final output should include the following sections:
-
-    # ---
-
-    # ### 📄 Output Format (Structured JSON-like)
-
-    # ```json
-    # {{
-    # "Demographics": {{
-    #     "Name": "",
-    #     "Dob": "",
-    #     "Chronological Age": "",
-    #     "Sex": "",
-    #     "Language": "",
-    #     "Parent Guardian": "",
-    #     "Uci Number": "",
-    #     "Service Coordinator": "",
-    #     "Examiner": "",
-    #     "Date Of Report": "",
-    #     "Date Of Encounter": ""
-    # }},
-    # "Referral Reason And Background": {{
-    #     "Background Info": "",
-    #     "Birth And Medical History": "",
-    #     "Speech Language Hearing": "",
-    #     "Fine Motor Development": "",
-    #     "Feeding History": "",
-    #     "Dental And Oral Behaviors": ""
-    # }},
-    # "Test Observations": "",
-    # "Assessment Tools Used": [],
-    # "Bayley 4": {{
-    #     "Cognitive": {{
-    #     "Scaled Score": "",
-    #     "Age Equivalent": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Receptive Communication": {{
-    #     "Scaled Score": "",
-    #     "Age Equivalent": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Expressive Communication": {{
-    #     "Scaled Score": "",
-    #     "Age Equivalent": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Fine Motor": {{
-    #     "Scaled Score": "",
-    #     "Age Equivalent": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Gross Motor": {{
-    #     "Scaled Score": "",
-    #     "Age Equivalent": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Social Emotional": {{
-    #     "Scaled Score": "",
-    #     "Narrative": ""
-    #     }},
-    #     "Adaptive Behavior": {{
-    #     "Scaled Score": "",
-    #     "Narrative": ""
-    #     }}
-    # }},
-    # "Sp2 Summary": {{
-    #     "Summary": "",
-    #     "Implications": ""
-    # }},
-    # "Chomps Summary": {{
-    #     "Score Breakdown": {{
-    #     "Complex Movement Patterns": "",
-    #     "Basic Movement Patterns": "",
-    #     "Oral Motor Coordination": "",
-    #     "Fundamental Oral Motor Skills": "",
-    #     "Total Score": ""
-    #     }},
-    #     "Narrative": ""
-    # }},
-    # "Pedieat Summary": {{
-    #     "Score Breakdown": {{
-    #     "Physiologic Symptoms": "",
-    #     "Mealtime Behaviors": "",
-    #     "Selective Eating": "",
-    #     "Oral Processing": "",
-    #     "Total Score": ""
-    #     }},
-    #     "Narrative": ""
-    # }},
-    # "Physical Exam Summary": "",
-    # "Cranial Nerve Screening Summary": "",
-    # "Summary": "",
-    # "Recommendations": [
-    #     "e.g. Feeding therapy one time per week...",
-    #     "..."
-    # ],
-    # "Goals": [
-    #     "Child will reduce finger use during mealtime...",
-    #     "..."
-    # ]
-    # }}
-
-    # """
-
-    PROMPT = f"""
-
-    You are a highly skilled pediatric occupational therapist and medical report writer. Based on the provided evaluation text extracted from a PDF, your task is to extract structured data and rewrite observations and test results into detailed, clinically accurate narratives.
-
-    The text will contain demographic details, clinical observations, and standardized test results (Bayley-4, SP2, ChOMPS, PediEAT). **Do not guess**. If a section is missing, write `"Not available"`.
-
-    This is the file context: {context}
-
-    ---
-
-    ## 🔁 Output Format: Markdown
-
-    ❗Return your final output as a **Markdown document**, following the structure shown below. This format will be used for generating a human-readable report in Google Docs. Use `**bold**` for section titles and keep the output readable with paragraph spacing.
-
-    ---
-
-    ### 📄 Markdown Output Structure
-    """
-
-    return PROMPT
+async def get_prompt(context: str):   
+    return await get_prompt_markdown_with_structure(context)
 
 
 async def call_openai(

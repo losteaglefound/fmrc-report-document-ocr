@@ -1,70 +1,124 @@
 
 async def get_pediatric_prompt(data: dict) -> str:
     prompt = f"""
-    You are a pediatric occupational therapist writing a detailed clinical report based on extracted information from a child’s assessment files. Maintain a professional, clinically accurate tone matching the FMRC Health Master Report 6:4.
+    You are a highly skilled pediatric occupational therapist and medical report writer. Based on the provided evaluation text extracted from a PDF, your task is to extract structured data and rewrite observations and test results into detailed, clinically accurate narratives.
 
-    Please generate the report content using the following data:
+    The text will contain demographic details, clinical observations, and standardized test results (Bayley-4, SP2, ChOMPS, PediEAT). **Do not guess**. If a section is missing, write `"Not available"`.
 
-    ### Demographics:
-    - Child’s Full Name: {data['child_name']}
-    - Date of Birth: {data['dob']}
-    - Chronological Age: {data['chronological_age']}
-    - UCI#: {data['uci']}
-    - Sex: {data['sex']}
-    - Preferred Language: {data['language']}
-    - Parent/Guardian Name: {data['guardian_name']}
-    - Date of Encounter: {data['encounter_date']}
+    This is the file context: {data}
 
     ---
 
-    ### Clinical Notes (Convert these bullet points into a professional paragraph):
-    {data['bullet_notes']}
+    ## 🔁 Output Format: Markdown
+
+    ❗Return your final output as a **Markdown document**, following the exact structure and formatting below. This report will be copied into Google Docs for final submission, so follow this format precisely:
 
     ---
 
-    ### Assessment Score Interpretations:
+    ### 📄 Markdown Output Structure
 
-    #### 🧠 Bayley-4:
-    - Cognitive: Scaled Score: {data['cog_score']}, Age Equivalent: {data['cog_age_eq']}, Delay: {data['cog_delay_pct']}
-    - Language: {data['lang_score']}, {data['lang_age_eq']}, {data['lang_delay_pct']}
-    - Motor: {data['motor_score']}, {data['motor_age_eq']}, {data['motor_delay_pct']}
+    **Clinical Evaluation Report**
 
-    Interpret these scores in relation to the child’s chronological age. Use classification labels (e.g., "Extremely Low", "Below Average") and describe functional implications observed in the child’s performance.
+    **Client Information**
 
-    ---
+    - Name: ...
+    - Date of Birth: ...
+    - Chronological Age: ...
+    - Sex: ...
+    - Primary Language: ...
+    - Parent/Guardian: ...
+    - Service Coordinator: ...
+    - Examiner: ...
+    - Date of Report: ...
+    - Date of Encounter: ...
 
-    #### 🎧 SP2 (Sensory Profile 2):
-    - Seeking: {data['sp2_seeking']}, Avoiding: {data['sp2_avoiding']}, Sensitivity: {data['sp2_sensitivity']}, Registration: {data['sp2_registration']}
+    **Reason for Referral and Background Information**
 
-    Explain these sensory tendencies with real-world examples (e.g., behavior during play, feeding, grooming). Describe how these patterns may affect occupational performance.
+    Summarize the reason for referral and include bulleted or paragraph-style entries for:
 
-    ---
+    - Birth & Medical History
+    - Speech, Language, & Hearing History
+    - Fine Motor Development
+    - Feeding History
+    - Dental History & Oral Behaviors
 
-    #### 🍴 CHOMPS:
-    - Scores: {data['chomps_scores_summary']}
+    **Test Observations**
 
-    Interpret domain-specific oral-motor concerns. Comment on feeding safety, bolus control, food hoarding, gag reflex, etc.
+    Summarize direct clinical observations during the session in paragraph form.
 
-    ---
+    **Assessment Tools Used**
 
-    #### 🥄 PEDI-EAT:
-    - Symptoms: {data['pedieat_scores']}
+    List the standardized assessments used:
+    - [Tool 1]
+    - [Tool 2]
+    ...
 
-    Describe implications for feeding safety, endurance, selectivity, and caregiver support needs.
+    **Bayley Scales of Infant and Toddler Development - Fourth Edition (BSID-4)**
 
-    ---
+    Summarize each domain in bullet or paragraph form:
+    - Cognitive Scale
+    - Receptive Communication
+    - Expressive Communication
+    - Fine Motor
+    - Gross Motor
+    - Social-Emotional
+    - Adaptive Behavior
 
-    ### Summary & Recommendations:
-    Generate a concise summary paragraph followed by:
-    - 3 measurable goals
-    - 2–3 specific recommendations for caregivers or next steps for care
+    **Toddler Sensory Profile 2 (SP2)**
 
-    ---
+    Narrative interpretation of sensory processing patterns and implications for function.
 
-    ### Additional Instructions:
-    - Only populate sections marked in green/yellow in the report template.
-    - Mark anything missing as “TBD”.
-    - Follow the tone, formatting, and language model of the Master Report 6:4.
+    **Child Oral and Motor Proficiency Scale (ChOMPS)**
+
+    Narrative summary and feeding implications.
+
+    **Pediatric Eating Assessment Tool (PediEAT)**
+
+    Narrative interpretation and clinical impact of results.
+
+    **Physical Examination**
+
+    List or describe physical findings including:
+    - Body
+    - Head & Neck
+    - Face
+    - Jaw
+    - Lips
+    - Tongue
+    - Cheeks
+    - Palate
+
+    **Cranial Nerve Screening**
+
+    Summarize screening results:
+    - CN I (Olfactory): ...
+    - CN V (Trigeminal): ...
+    - CN VII (Facial): ...
+    - CN IX (Glossopharyngeal): ...
+    - CN X (Vagus): ...
+    - CN XI (Accessory): ...
+    - CN XII (Hypoglossal): ...
+
+    **Summary**
+
+    Summarize findings across all assessments and observations.
+
+    **Recommendations**
+
+    - Recommendation 1
+    - Recommendation 2
+    ...
+
+    **Goals**
+
+    - Goal 1
+    - Goal 2
+    ...
+
+    **Contact Information**
+
+    - Fushia Crooms, MOT, OTR/L  
+    - Email: fushia@fmrchealth.com  
+    - Phone #: 323-229-6025 Ext. 1
     """
-
     return prompt

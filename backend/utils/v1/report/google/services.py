@@ -6,7 +6,29 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
-from .....common import setting
+from .....common import (
+    google_document_permissions,
+    google_permission_roles,
+    logging, 
+    setting
+)
+from ...markdown import (
+    extract_plain_text,
+    clear_body,
+    parse_markdown_and_create_requests
+)
+
+
+logger = logging.getLogger(__name__)
+
+current_drive_service = None
+current_document_service = None
+
+
+async def get_document_by_id(doc_id: str, /):
+    doc = current_document_service.documents().get(documentId=doc_id).execute()
+    return doc
+
 
 async def get_services(
     drive: bool = False,
@@ -20,6 +42,8 @@ async def get_services(
         drive_service: Google Drive service
         docs_service: Google Docs service
     """
+
+    global current_document_service, current_drive_service
 
     if not any([drive, docs]):
         raise ValueError("Either drive or docs must be True")
@@ -37,28 +61,10 @@ async def get_services(
             token.write(creds.to_json())
 
     if drive:
-        drive_service = build('drive', 'v3', credentials=creds)
+        current_drive_service = drive_service = build('drive', 'v3', credentials=creds)
     if docs:
-        docs_service = build('docs', 'v1', credentials=creds)
+        current_document_service = docs_service = build('docs', 'v1', credentials=creds)
     return drive_service, docs_service
-
-
-async def copy_template(drive_service, template_id, new_title):
-    body = {'name': new_title}
-    new_doc = drive_service.files().copy(fileId=template_id, body=body).execute()
-    return new_doc['id']
-
-
-async def replace_placeholders(docs_service, document_id, replacements):
-    requests = []
-    for placeholder, value in replacements.items():
-        requests.append({
-            'replaceAllText': {
-                'containsText': {'text': f'{{{{{placeholder}}}}}', 'matchCase': True},
-                'replaceText': value
-            }
-        })
-    docs_service.documents().batchUpdate(documentId=document_id, body={'requests': requests}).execute()
 
 
 async def insert_text(docs_service, document_id, text="Hello, this is an automated message!"):
@@ -79,8 +85,9 @@ async def insert_text(docs_service, document_id, text="Hello, this is an automat
         ).execute()
     except Exception as e:
         raise Exception(f"Error inserting text: {e}") from e
+    
 
-async def create_new_document(docs_service) -> str:
+async def create_new_document(docs_service, /, doc_name: str = "New Document") -> str:
     """
     Create new document and returns it's id
     Args:
@@ -89,25 +96,33 @@ async def create_new_document(docs_service) -> str:
         doc_id: Document id
     """
     docs = docs_service.documents().create(body={
-        'title': 'New Document'
+        'title': doc_name
     }).execute()
     doc_id = docs.get("documentId")
     return doc_id
 
 
+async def assign_permission(
+    drive_service, 
+    doc_id: str, 
+    /,
+    perm_type: google_document_permissions = setting.GOOGLE_DOCUMENT_DEFAULT_PERM_TYPE,
+    perm_role: google_permission_roles = setting.GOOGLE_DOCUMENT_DEFAULT_PERM_ROLE
+) -> None:
+    """
+    Assign permissions to google document.
+    """
+    permission = {
+        'type': perm_type,
+        'role': perm_role,  # or reader / commenter / owner
+    }
 
-async def create_google_docs(report: str) -> str:
-    drive_service, docs_service = await get_services(
-        drive=True,
-        docs=True
-    )
-    doc_id = await create_new_document(docs_service)
-    await insert_text(docs_service, doc_id, report)
+    response = drive_service.permissions().create(
+        fileId=doc_id,
+        body=permission,
+        fields='id'
+    ).execute()
+
+    return response.get("id")
 
 
-    # Get document content
-    # doc_content = docs_service.documents().get(documentId=doc_id).execute()
-    # async with aiofiles.open(f"doc_content_{doc_id}.json", 'w') as f:
-    #     await f.write(json.dumps(doc_content, indent=4))
-    
-    return f'Document created: https://docs.google.com/document/d/{doc_id}/edit'

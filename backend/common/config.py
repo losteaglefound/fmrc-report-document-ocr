@@ -12,6 +12,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 open_ai_models = Literal["gpt-4o", "gpt-4o-mini"]
 """OpenAI models"""
 
+google_document_permissions = Literal['reader', 'writer', 'commenter']
+"""Google document permissions"""
+
+google_permission_roles = Literal['user', 'group', 'anyone']
+"""Google permission roles"""
+
 class Setting:
     
 
@@ -26,6 +32,8 @@ class Setting:
     OPENAI_MODEL: open_ai_models = os.getenv("OPENAI_MODEL")
     GOOGLE_CLIENT_SCOPE: list[str] = os.getenv("GOOGLE_CLIENT_SCOPE").split(",")
     GOOGLE_CLIENT_ID: str = os.getenv("GOOGLE_CLIENT_ID")
+    GOOGLE_DOCUMENT_DEFAULT_PERM_TYPE: google_document_permissions = "reader"
+    GOOGLE_DOCUMENT_DEFAULT_PERM_ROLE: google_permission_roles = "user"
     TEMPLATES_DIR: str = os.path.join(BASE_DIR, "templates")
 
 setting = Setting()
