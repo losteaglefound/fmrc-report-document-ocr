@@ -209,6 +209,6 @@ __marimo__/
 
 
 doc_content_*.json
-/backend/static
+/backend/upload
 token.json
 credential*.json

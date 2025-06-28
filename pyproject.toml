@@ -22,7 +22,8 @@ dependencies = [
     "openai==1.91.0",
     "google-api-python-client==2.173.0",
     "google-auth==2.40.3",
-    "google-auth-oauthlib==1.2.2"
+    "google-auth-oauthlib==1.2.2",
+    "fastapi-mail==1.5.0"
 ]
 
 [project.urls]

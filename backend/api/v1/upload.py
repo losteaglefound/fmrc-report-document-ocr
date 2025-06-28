@@ -7,11 +7,18 @@ from fastapi import (
     status,
     UploadFile
 )
+from fastapi.background import BackgroundTasks
 from fastapi.exceptions import HTTPException
 from fastapi.responses import JSONResponse
+from fastapi_mail import (
+    FastMail,
+    MessageSchema as FastmailMessageSchema,
+    MessageType
+)
 
 from ...common import (
     logging,
+    mail,
     setting
 )
 from ...common.utils import (
@@ -84,19 +91,29 @@ async def create_google_docs(report: str, doc_name: str = "New document") -> str
 
     logger.info("Formatted markdown to google format")
     await convert_markdown_to_google_format(docs_service, doc_id)
-
-
-
-    # Get document content
-    # doc_content = docs_service.documents().get(documentId=doc_id).execute()
-    # async with aiofiles.open(f"doc_content_{doc_id}.json", 'w') as f:
-    #     await f.write(json.dumps(doc_content, indent=4))
     
     return f'Document created: https://docs.google.com/document/d/{doc_id}/edit'
 
 
+async def send_mail_report(background_task, message):
+    message_schema = FastmailMessageSchema(
+        subject="mail testing from report generation",
+        recipients=[setting.MAIl_CONFIG.MAIL_FROM],
+        message=message,
+        subtype=MessageType.plain
+    )
+    
+    background_task.add_task(
+        mail.send_message,
+        message=message_schema
+    )
+
+
 @upload_router.post("")
-async def upload_file(files: list[UploadFile]):
+async def upload_file(
+    files: list[UploadFile],
+    background_task: BackgroundTasks
+):
 
     if len(files) == 1 and files[0].filename == "":
         logger.info("No file uploaded")
@@ -137,10 +154,11 @@ async def upload_file(files: list[UploadFile]):
                 document_link = await create_google_docs(response)
 
             logging.info("Link to google document: {}".format(document_link))
+            
+            await send_mail_report(background_task)
+            logging.info("Sended the mail to the client.")
 
-            # google_docs_url = await create_google_docs(response)
-            # logger.info(f"Google docs url: {google_docs_url}")
-
+            
         return JSONResponse(
             {
                 "message": f"File uploaded successfully, report has beend generated and uploaded to google docs {document_link}."
